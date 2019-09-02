@@ -1,0 +1,222 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* Global */
+.container {
+    width: 80%;
+    margin: auto; /* Moves elements into the middle */
+    overflow: hidden; /* content that goes out of div wont have scrolling applied */
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.button_1 {
+    height: 38px;
+    background-color: #e8491d;
+    border: 0; /* or none */
+    padding: 0 20px;
+    color: white;
+}
+
+.dark {
+    padding: 15px;
+    background-color: #35424a;
+    color: white;
+    margin: 10px 0;
+}
+
+
+/* Header */
+header {
+    background-color: #35424a;
+    color: white;
+    padding-top:30px;
+    min-height: 70px; /* min height at smallest devices */
+    border-bottom: #e8491d solid 3px;
+}
+
+header a {
+    color:white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+/* Positioning */
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header .branding {
+    float: left;
+}
+
+header .branding h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+}
+
+/* Making "ACME" and "Home" highlighted orange */
+header .highlight, header .current a {
+    color: #e8491d;
+    font-weight: bold;
+}
+
+/* hover state for nav menu items */
+header a:hover {
+    color: #cccccc;
+    font-weight: bold;
+}
+/* End of Header */
+
+/* Showcase section */
+.showcase {
+    padding-bottom:60px;
+    min-height: 400px;
+    background-image: url(../images/showcase.jpg); /* Going out of css folder requires using .. */
+    background-position-y: -400px; /* positions image up a bit */
+}
+
+.showcase .container {
+    text-align: center;
+    color:white;
+    max-width: 800px;
+}
+
+.showcase h1 {
+    margin-top: 100px;
+    margin-bottom: 10px;
+    font-size: 48px;
+}
+
+.showcase p {
+    font-size: 20px;
+}
+/* End of Showcase */
+
+/* Newsletter section */
+.newsletter {
+    padding: 15px;
+    background-color:#35424a;
+    color: white;
+}
+
+.newsletter h1 {
+    float: left;
+}
+
+.newsletter form {
+    float: right;
+    margin-top: 16px;
+}
+
+.newsletter input[type="email"] {
+    padding:4px; 
+    height: 25px;
+    width:250px;
+}
+
+/* Button part of global styling */
+
+/* Boxes */
+.boxes {
+    margin-top: 20px;
+}
+.boxes .box {
+    width: 30%;
+    /* Need to specify width in order to use float */
+    float: left;
+    padding: 10px;
+    text-align: center;
+}
+
+.boxes .box img {
+    width: 90px;
+}
+
+/* Footer section */
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: white;
+    background-color: #e8491d;
+    text-align: center;
+}
+
+/* About page */
+
+/* Main column */
+article.main-col {
+    width: 65%;
+    float: left;
+}
+
+/* Sidebar */
+aside.sidebar {
+    width: 30%;
+    float: right;
+    margin-top: 10px;
+}
+
+/* Service Page */
+
+ul.services li {
+    list-style: none;
+    padding: 20px;
+    border: #cccccc solid 1px;
+    margin-bottom: 5px;
+    background-color: #e6e6e6;
+}
+
+aside.sidebar .quote input, aside.sidebar .quote textarea /* selectors here are tricky */ {
+    width: 90%;
+    padding: 5px;
+}
+
+/* Responsive sizing from mobile up*/
+@media(max-width: 768px){
+    header .branding, 
+    header nav, 
+    header nav li,
+    .newsletter h1,
+    .newsletter form,
+    .boxes .box,
+    article.main-col,
+    aside.sidebar {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    header {
+        padding-bottom: 20px;
+    }
+
+    .showcase h1 {
+        margin-top:40px;
+    }
+
+    .newsletter form input[type="email"], .quote input, .quote textarea {
+        /* display: block; */
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .newsletter button .quote button {
+        display: block;
+        width: 100%;
+    }
+}
