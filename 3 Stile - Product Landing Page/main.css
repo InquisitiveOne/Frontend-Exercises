@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto Lt", sans-serif;
+  font-size: 10px;
+  color: #333;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu-toggle {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  display: none;
+  z-index: 999;
+}
+
+.menu-toggle i,
+.fa-times {
+  font-size: 3.5rem;
+}
